@@ -1,0 +1,28 @@
+create database orderbook;
+CREATE TABLE Orders (
+    custID int,
+    id int NOT NULL AUTO_INCREMENT,
+    Stock varchar(255),
+    quantity int,
+    orderType varchar(15),
+    price double(50,2),
+    status varchar(25),
+    orderDate varchar(255),
+    executedQty int,
+    PRIMARY KEY (id)
+);
+
+create table Stocks (
+	id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    PRIMARY KEY (id)
+);
+
+insert into `Stocks` (name) values ('DBS'),
+('Agri-Tech'),
+('Beeyu Overseas'),
+('Dhunseri Tea'),
+('Goodricke Group'),
+('Harrisons Malay'),
+('JK Agri Genetic'),
+('Kaveri Seed');
